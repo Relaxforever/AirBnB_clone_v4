@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
 	  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-	  <script type="text/javascript" src="static/scripts/1-hbnb.js?{{ cache_id }}}"></script>
+	  <script type="text/javascript" src="/static/scripts/1-hbnb.js?{{ cache_id }}"></script>
     <title>Holberton AirBnB</title>
 
     <!-- FAVICON -->
@@ -64,7 +64,7 @@
 	      </UL>
 	      {% endfor %}
 	    </ul>
-	  </div><INPUT type="checkbox">
+	  </div>
 
 	  <!-- **********************
 	       AMENITIES
@@ -72,10 +72,11 @@
 
 	  <div class="amenities">
 	    <h3>Amenities</h3>
-	    <h4>&nbsp;</h4>
+	    <h4 id="checked">&nbsp;</h4>
 	    <ul class="popover">
 	      {% for amenity in amens|sort(attribute='name') %}
-	      <LI style="list-style: none"><input type="checkbox">{{ amenity.name }}</LI>
+		  <LI style="list-style: none"><input type="checkbox" style="margin-left: 10px;"
+			data-id="{{ amenity.id }}" data-name="{{ amenity.name }}" id="lis">{{ amenity.name }}</LI>
 	      {% endfor %}
 	    </ul>
 	  </div>
