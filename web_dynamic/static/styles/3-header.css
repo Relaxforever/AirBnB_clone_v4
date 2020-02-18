@@ -26,3 +26,8 @@ header {
 #api_status.available {
 	background-color: #ff545f;
 }
+#checked {
+		text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+}
